@@ -1,0 +1,26 @@
+{
+  "name": "agraciakuvut/senderglobal",
+  "type": "library",
+  "description": "PHP Wrapper for the SenderGlobal API",
+  "homepage": "https://github.com/agraciakuvut/KuvutTagging",
+  "keywords": [
+    "SenderGlobal"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Andrés Gracia",
+      "email": "agracia@kuvut.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "agraciakuvut\\": "src/SenderGlobal"
+    }
+  },
+  "require": {
+    "php": ">=7.0.0"
+  },
+  "require-dev": {
+  }
+}
