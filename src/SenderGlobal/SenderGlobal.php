@@ -55,6 +55,9 @@ class SenderGlobal
         '51' => 'El registro que se intenta dar como bounce no existe',
         '52' => 'Bounce no ejecutado, ponerse en contacto con Sender Global',
         '53' => 'El registro que se intenta dar como bounce ya está dado de baja u otro estado',
+        '61' => 'El usuario no existe en la base de datos',
+        '62' => 'Activación no ejecutada, ponerse en contacto con Sender Global',
+        '63' => 'El usuario ya estaba activado en la base',
     ];
 
     /**
@@ -153,6 +156,12 @@ class SenderGlobal
     public function unregister(String $email)
     {
         $this->action = 'bajas';
+        return $this->parseResult($this->makeCall($email));
+    }
+
+    public function reactivate(String $email)
+    {
+        $this->action = 'activar';
         return $this->parseResult($this->makeCall($email));
     }
 
